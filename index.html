@@ -5,9 +5,12 @@
         <title>WebApp</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- FONTS AND CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/Chart.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/grid_layout.css">
+        <script src="scripts/Chart.js" ></script>
     </head>
 
     <body>
@@ -29,7 +32,39 @@
             </nav>
 
             <div class="traffic">
-                <h2>traffic</h2>
+                <canvas id="myChart" width="auto" height="55px"></canvas>
+                    <script>
+                    var ctx = document.getElementById('myChart');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            datasets: [{
+                                lineTension: [0],
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                backgroundColor: [
+                                    'cornflowerblue'
+                                ],
+                                borderColor: [
+                                    'steelblue'
+                                ],
+                                borderWidth: 1
+                                
+                            }]
+                        },
+                        options: {
+                            
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                    </script>
             </div>
             <div class="bar-graph">
                 <h2>traffic</h2>
@@ -57,5 +92,6 @@
         <footer>
 
         </footer>
-        <script src="js/scripts.js" ></script>
+
+        <script src="scripts/scripts.js" ></script>
     </body>
