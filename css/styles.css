@@ -1,0 +1,61 @@
+.bell-icon  {
+    width: 25px;
+    border-right: darkblue;
+    align-self: center;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    margin-left: 30px;
+    border-radius: 50%;
+    
+}
+
+h1 {
+    flex-grow: 2;
+    margin-left: 30px;
+    color: white;
+    align-self: center;
+}
+
+header p {
+    align-self: center;
+    margin-left:10px;
+    margin-right: 20px;
+    color: white;
+}
+
+header{
+    background-color: cornflowerblue;
+    display:flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.icon{
+    width:25px;
+    height: 25px;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/* .traffic,
+.bar-graph,
+.donut,
+.social-stats,
+.new-members,
+.recent,
+.message,
+.settings   {
+    background-color: steelblue;
+} */

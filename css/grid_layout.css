@@ -1,0 +1,79 @@
+body{
+    display: grid;
+    width: auto;
+    
+    grid-template-rows: 100px minmax(200px, 1fr) 100px;
+    grid-template-areas: 
+    " header header header"
+    " main main main "
+    " main main main "
+    " main main main "
+    " main main main "
+    " main main main";
+}
+
+
+header{
+    grid-area:header;
+}
+
+main {
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 60px 1fr 1fr;
+    grid-template-rows: repeat(2, 300px) minmax(100px, 1fr) repeat(2, 300px);
+    grid-template-areas: 
+    " nav traffic traffic "
+    " nav bar donut "
+    " nav social social "
+    " nav newmembers recent "
+    " nav message settings ";
+
+}
+
+nav{
+    grid-area:nav;
+}
+
+.traffic{
+    grid-area:traffic;
+    background-color: tomato;
+}
+
+.bar-graph{
+    grid-area:bar;
+    background-color: thistle;
+}
+
+.donut{
+    grid-area:donut;
+    background-color: wheat;
+}
+
+.social-stats{
+    grid-area:social;
+    background-color: sandybrown;
+}
+
+.new-members{
+    grid-area:newmembers;
+    background-color: peachpuff;
+}
+
+.recent{
+    grid-area:recent;
+    background-color: palevioletred;
+}
+
+.message{
+    grid-area:message;
+    background-color: mistyrose;
+}
+
+.settings{
+    grid-area:settings;
+    background-color: lightgray;
+}
+
+
+
