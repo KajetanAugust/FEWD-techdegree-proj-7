@@ -2,7 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.bell-icon  {
+.bell-icon {
     width: 25px;
     border-right: darkblue;
     align-self: center;
@@ -33,24 +33,62 @@ header p {
     font-size: 1em;
 }
 
-header{
+header {
     background-color: cornflowerblue;
     display:flex;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height:60px;
 }
 
-nav{
+nav {
     background-color: teal;
     display: flex;
     flex-direction: column;
     padding-top: 15px;
+    position: fixed;
+    width: 100%;
+    height:60px;
+    margin-right: 25px;
 }
 
-.icon{
+.icon {
     width:25px;
     height: 25px;
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+}
+
+
+.social-stats {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.social-data {
+    align-self: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 45px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 0.8em;
+    margin-top: 40px;
+}
+
+.count {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-top: 35px;
 }

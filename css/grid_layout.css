@@ -1,84 +1,165 @@
+
+
+
+
+
+
+/* MAIN GRID */
 body{
     display: grid;
-    width: auto;
-    
-    grid-template-rows: 60px auto;
+    grid-template-rows: 60px 1fr;
     grid-template-areas: 
-    " header header header"
-    " main main main "
-    " main main main "
-    " main main main "
-    " main main main "
-    " main main main";
+    " header "
+    " main   ";
 }
 
-
-header{
-    grid-area:header;
-    position: fixed;
-    width: 100%;
-    height:60px;
-}
-
-main {
+/* main {
     grid-area: main;
     display:grid;
-    grid-template-columns: 60px 1fr 1fr;
-    grid-template-rows: repeat(2, 300px) minmax(150px, 1fr) repeat(2, 300px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr repeat(3, 200px) repeat(3, 100px) repeat(4, 200px);
     grid-template-areas: 
-    " nav traffic traffic "
-    " nav bar donut "
-    " nav social social "
-    " nav newmembers recent "
-    " nav message settings ";
-
+    " nav nav"
+    " traffic traffic "
+    " bar bar "
+    " donut donut"
+    " social social "
+    " social social"
+    " social social"
+    " newmembers newmembers"
+    " recent recent"
+    " message message"
+    " settings settings";
 }
 
-nav{
-    grid-area:nav;
+nav {
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
     position: fixed;
+    width: 60px;
+    height:60px;
+} */
+
+@media (min-width: 768px){
+    body{
+        display: grid;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas: 
+        " header header "
+        " main main  "
+        " main main  "
+        " main main  "
+        " main main  "
+        " main main ";
+    }
+
+    main {
+        grid-area: main;
+        display:grid;
+        grid-template-columns: 60px 1fr 1fr;
+        grid-template-rows: repeat(2, 300px) minmax(150px, 1fr) repeat(2, 300px);
+        grid-template-areas: 
+        " nav traffic traffic "
+        " nav bar donut "
+        " nav social social "
+        " nav newmembers recent "
+        " nav message settings ";
+    
+    }
+}
+
+
+@media (min-width: 1024px){
+    body {
+        display: grid;
+        width: auto;
+        grid-template-rows: 60px auto;
+        grid-template-areas: 
+        " header header header"
+        " main main main "
+        " main main main "
+        " main main main "
+        " main main main "
+        " main main main";
+    }
+}
+
+header {
+    grid-area:header;
+}
+
+
+
+nav {
+    grid-area:nav;
+    
     width: 60px;
     height: 100%;
 }
 
-.traffic{
+.traffic {
     grid-area:traffic;
-    
 }
 
-.bar-graph{
+.bar-graph {
     grid-area:bar;
     
 }
 
-.donut{
+.donut {
     grid-area:donut;
     
 }
 
-.social-stats{
+.social-stats {
     grid-area:social;
     background-color: sandybrown;
 }
 
-.new-members{
+.new-members {
     grid-area:newmembers;
     background-color: peachpuff;
 }
 
-.recent{
+.recent {
     grid-area:recent;
     background-color: palevioletred;
 }
 
-.message{
+.message {
     grid-area:message;
     background-color: mistyrose;
 }
 
-.settings{
+.settings {
     grid-area:settings;
     background-color: lightgray;
+}
+
+/* SOCIAL GRID */
+
+.social-data {
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 20px 1fr;
+    grid-template-areas: 
+    "logo name ."
+    "logo count count"
+   
+
+}
+
+.logo   {
+    grid-area: logo;
+}
+.name {
+    grid-area: name;
+}
+
+.count {
+    grid-area:count;
 }
 
 

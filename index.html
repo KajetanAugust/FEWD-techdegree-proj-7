@@ -5,7 +5,7 @@
         <title>WebApp</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- FONTS AND CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/Chart.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -32,132 +32,49 @@
             </nav>
 
             <div class="traffic">
-                <canvas id="myChart" width="auto" height="55px"></canvas>
-                    <script>
-                    var ctx = document.getElementById('myChart');
-                    var myChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: ['16-22', '23-29', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '1-24', '25-31'],
-                            datasets: [{
-                                lineTension: [0],
-                                label: '# of Votes',
-                                data: [3000, 8000, 6000, 10000, 12000, 10000, 11000, 8000, 11000, 14000, 11000, 14000],
-                                backgroundColor: [
-                                    'cornflowerblue'
-                                ],
-                                borderColor: [
-                                    'steelblue'
-                                ],
-                                borderWidth: 1
-                                
-                            }]
-                        },
-                        options: {
-                            
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                    </script>
+                <h3>TRAFFIC</h3>
+                    
             </div>
             <div class="bar-graph">
-                <canvas id="barGraph" width="auto" height="100px"></canvas>
-                    <script>
-                    var ctx = document.getElementById('barGraph');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-                            datasets: [{
-                                lineTension: [0],
-                                label: '# of Votes',
-                                data: [50, 90, 150, 100, 200, 180, 80],
-                                backgroundColor: [
-                                    'cornflowerblue',
-                                    'cornflowerblue',
-                                    'cornflowerblue',
-                                    'cornflowerblue',
-                                    'cornflowerblue',
-                                    'cornflowerblue',
-                                    'cornflowerblue'
-                                ],
-                                borderColor: [
-                                    
-                                ],
-                                borderWidth: 1
-                                
-                            }]
-                        },
-                        options: {
-                            
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                    </script>
+                <h3>DAILY TRAFFIC</h3>
+                
             </div>
             <div class="donut">
-                <canvas id="donutGraph" width="auto" height="100px"></canvas>
-                    <script>
-                    var ctx = document.getElementById('donutGraph');
-                    var myChart = new Chart(ctx, {
-                        type: 'doughnut',
-                        data: {
-                            labels: ['Phones', 'Tablets', 'Desktop'],
-                            datasets: [{
-                                lineTension: [0],
-                                label: '# of Votes',
-                                data: [12.5, 20, 67.5 ],
-                                backgroundColor: [
-                                    'cornflowerblue',
-                                    'sandybrown',
-                                    'lightgrey'
-                                ],
-                                borderColor: [
-                                    // 'steelblue'
-                                    // ''
-                                ],
-                                borderWidth: 1
-                                
-                            }]
-                        },
-                        options: {
-                            
-                            scales: {
-                                // yAxes: [{
-                                //     ticks: {
-                                //         beginAtZero: true
-                                //     }
-                                // }]
-                            }
-                        }
-                    });
-                    </script>
+                <h3>MOBILE USERS</h3>
+                
             </div>
             <div class="social-stats">
-                <h2>traffic</h2>
+                <h3>SOCIAL STATS</h3>
+                <div class="social-data">
+                    <img src="icons/icon-twitter.svg" class="twitter logo" alt="twitter icon">
+                    <p class="name">Twitter</p>
+                    <p class="count">10,345</p>
+                </div>
+                <div class="social-data">
+                    <img src="icons/icon-facebook.svg" class="facebook logo" alt="facebook icon">
+                    <p class="name">Facebook</p class="name">
+                    <p class="count">8,739</p>
+                </div>
+                <div class="social-data">
+                    <img src="icons/icon-google-plus.svg" class="google logo" alt="google icon">
+                    <p class="name">Google+</p>
+                    <p class="count">2530</pclass="count">
+                </div>
             </div>
             <div class="new-members">
+                <h3>NEW MEMBERS</h3>
                 <h2>traffic</h2>
             </div>
             <div class="recent">
+                <h3>RECENT ACTIVITY</h3>
                 <h2>traffic</h2>
             </div>
             <div class="message">
+                <h3>MESSAGE USER</h3>
                 <h2>traffic</h2>
             </div>
             <div class="settings">
+                <h3>SETTINGS</h3>
                 <h2>traffic</h2>
             </div>
         </main>
