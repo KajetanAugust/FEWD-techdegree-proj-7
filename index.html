@@ -38,11 +38,11 @@
                     var myChart = new Chart(ctx, {
                         type: 'line',
                         data: {
-                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            labels: ['16-22', '23-29', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '1-24', '25-31'],
                             datasets: [{
                                 lineTension: [0],
                                 label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
+                                data: [3000, 8000, 6000, 10000, 12000, 10000, 11000, 8000, 11000, 14000, 11000, 14000],
                                 backgroundColor: [
                                     'cornflowerblue'
                                 ],
@@ -67,10 +67,83 @@
                     </script>
             </div>
             <div class="bar-graph">
-                <h2>traffic</h2>
+                <canvas id="barGraph" width="auto" height="100px"></canvas>
+                    <script>
+                    var ctx = document.getElementById('barGraph');
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                            datasets: [{
+                                lineTension: [0],
+                                label: '# of Votes',
+                                data: [50, 90, 150, 100, 200, 180, 80],
+                                backgroundColor: [
+                                    'cornflowerblue',
+                                    'cornflowerblue',
+                                    'cornflowerblue',
+                                    'cornflowerblue',
+                                    'cornflowerblue',
+                                    'cornflowerblue',
+                                    'cornflowerblue'
+                                ],
+                                borderColor: [
+                                    
+                                ],
+                                borderWidth: 1
+                                
+                            }]
+                        },
+                        options: {
+                            
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                    </script>
             </div>
             <div class="donut">
-                <h2>traffic</h2>
+                <canvas id="donutGraph" width="auto" height="100px"></canvas>
+                    <script>
+                    var ctx = document.getElementById('donutGraph');
+                    var myChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Phones', 'Tablets', 'Desktop'],
+                            datasets: [{
+                                lineTension: [0],
+                                label: '# of Votes',
+                                data: [12.5, 20, 67.5 ],
+                                backgroundColor: [
+                                    'cornflowerblue',
+                                    'sandybrown',
+                                    'lightgrey'
+                                ],
+                                borderColor: [
+                                    // 'steelblue'
+                                    // ''
+                                ],
+                                borderWidth: 1
+                                
+                            }]
+                        },
+                        options: {
+                            
+                            scales: {
+                                // yAxes: [{
+                                //     ticks: {
+                                //         beginAtZero: true
+                                //     }
+                                // }]
+                            }
+                        }
+                    });
+                    </script>
             </div>
             <div class="social-stats">
                 <h2>traffic</h2>
