@@ -17,7 +17,7 @@ main {
     grid-area: main;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 60px repeat(3, 200px) repeat(3, 150px) repeat(4, 300px);
+    grid-template-rows: 60px repeat(3, 200px) repeat(3, 150px) repeat(4, 350px);
     grid-template-areas: 
     " nav "
     " traffic "
@@ -34,9 +34,39 @@ main {
 
 
 .social-stats {
-    flex-direction: row;}
+    flex-direction: row;
+}
 
 
+/* MESSAGE USER GRID */
+.message {
+    display: grid;
+    grid-template-areas: 
+    " message-title "
+    " search-usr "
+    " message-usr "
+    " send-message "
+    ;
+    /* grid-gap: 10px; */
+}
+
+.search-usr {
+    grid-area:search-usr;
+}
+
+.message-usr {
+    grid-area:message-usr;
+}
+
+.message button {
+    grid-area:send-message;
+}
+
+.message h4 {
+    grid-area:message-title;
+}
+
+/* END MESSAGE USER GRID */
 
 header {
     grid-area:header;
@@ -52,6 +82,8 @@ nav {
     width: 100%;
     height: 60px;
 }
+
+
 
 .traffic {
     grid-area:traffic;
@@ -84,7 +116,6 @@ nav {
 
 .message {
     grid-area:message;
-    background-color: mistyrose;
 }
 
 .settings {
@@ -134,7 +165,7 @@ nav {
         grid-area: main;
         display:grid;
         grid-template-columns: 60px 1fr 1fr;
-        grid-template-rows: repeat(2, 300px) minmax(150px, 1fr) repeat(2, 300px);
+        grid-template-rows: repeat(2, 300px) minmax(150px, 1fr) repeat(2, 400px);
         grid-template-areas: 
         " nav traffic traffic "
         " nav bar donut "
