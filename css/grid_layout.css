@@ -68,9 +68,60 @@ main {
 
 /* END MESSAGE USER GRID */
 
+/* SETTINGS GRID */
+
+.settings {
+    display: grid;
+    grid-template-areas:
+    "settings-h4 ."
+    "notifications switch1"
+    "set-public switch2"
+    "settings-select settings-select"
+    "save-btn cancel-btn"
+    ;
+}
+
+.settings h4 {
+    grid-area: settings-h4;
+}
+
+.notifications{
+    grid-area:notifications;
+}
+
+.switch1 {
+    grid-area: switch1;
+}
+
+.set-public {
+    grid-area: set-public;
+}
+
+.switch2 {
+    grid-area: switch2;
+}
+
+.save-btn {
+    grid-area:save-btn;
+}
+
+.cancel-btn {
+    grid-area:cancel-btn;
+}
+
+.settings select {
+    grid-area:settings-select;
+}
+
+
+/* END SETTINGS GRID */
+
 header {
     grid-area:header;
 }
+
+
+
 
 
 
@@ -120,7 +171,6 @@ nav {
 
 .settings {
     grid-area:settings;
-    background-color: lightgray;
 }
 
 /* SOCIAL GRID */

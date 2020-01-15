@@ -126,3 +126,35 @@ h4 {
     margin-right: auto;
     margin-bottom: auto;
 }
+
+
+/* SETTINGS */
+
+.settings {
+    border: 1px solid lightgray
+}
+
+.settings select {
+    width: 80%;
+    margin: auto auto;
+    height: 40px;
+}
+
+.settings p {
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+
+.settings button {
+    width: 40%;
+    background-color: rgb(96, 97, 177);
+    border-radius: 5px;
+    border-style: none;
+    height: 40px;
+    margin: auto auto;
+}
+
+.settings select {
+    width: 80%;
+}
