@@ -1,160 +1,85 @@
-body {
+
+/* ////////////////////// */
+/* //////  GLOBAL  ////// */
+/* ////////////////////// */
+
+* {
     font-family: 'Lato', sans-serif;
 }
 
-.bell-icon {
-    width: 25px;
-    border-right: darkblue;
-    align-self: center;
+/* ////////////////////// */
+/* //////  HEADER  ////// */
+/* ////////////////////// */
+
+header {
+    background-color: rgb(62, 91, 125);
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
 }
 
-.profile-picture {
-    width: 30px;
-    height: 30px;
-    align-self: center;
-    margin-left: 30px;
-    border-radius: 50%;
+header h1 {
+    flex-grow:2;
+    margin: auto auto auto 15px;
     
 }
 
-h1 {
-    flex-grow: 2;
-    margin-left: 30px;
-    color: white;
-    align-self: center;
-    font-size: 1.5em;
+.profile-picture {
+    border-radius: 50%;
+    max-height: 70%;
+    margin: auto 10px auto 10px;
+    
 }
 
 header p {
-    align-self: center;
-    margin-left:10px;
-    margin-right: 20px;
-    color: white;
-    font-size: 1em;
+    margin: auto 15px auto 10px;
+    font-weight: 400;    
 }
 
-header {
-    background-color: cornflowerblue;
-    display:flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    height:60px;
+.bell-icon {
+    max-height: 40%;
+    margin: auto 10px auto 10px;
 }
 
+/* ////////////////////// */
+/* ///////  NAV  //////// */
+/* ////////////////////// */
 
+nav {
+    background-color: rgb(40, 65, 94);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
 
 .icon {
-    width:25px;
-    height: 25px;
-    justify-self: center;
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-bottom: 20px; */
-}
-
-
-/* .social-stats {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-} */
-
-.social-data {
+    max-height: 40%;
     align-self: center;
 }
+
+/* ////////////////////// */
+/* /////  TRAFFIC  ////// */
+/* ////////////////////// */
+
+
+/* ////////////////////// */
+/* ////  BAR GRAPH  ///// */
+/* ////////////////////// */
+
+
+/* ////////////////////// */
+/* /////  DOUGHNUT  ///// */
+/* ////////////////////// */
+
+
+/* ////////////////////// */
+/* ///  SOCIAL STATS //// */
+/* ////////////////////// */
 
 .logo {
-    width: 40px;
-    height: 40px;
-    margin: 45px;
-    background-color: cornflowerblue;
-    border-radius: 50%;
-}
-
-.name {
-    font-weight: 700;
-    font-size: 0.8em;
-    margin-top: 40px;
-}
-
-.count {
-    font-weight: 300;
-    font-size: 1.5em;
-    margin-top: 35px;
-}
-
-
-/* MESSAGE USER */
-
-.message {
-    border: 1px solid lightgray
-}
-
-.message input {
-    width: 80%;
-    align-self: center;
-    border-radius: 5px;
-    border-style: none;
-    border: 1px solid lightgray;
-    margin: auto auto;
-    background-color: rgb(247, 247, 247);
-}
-
-.message button {
-    width: 80%;
-    align-self: center;
-    background-color: rgb(96, 97, 177);
-    border-radius: 5px;
-    border-style: none;
-    height: 40px;
-    margin: auto auto;
-}
-
-.search-usr {
-    height: 40px;
-}
-
-.message-usr {
-    height: 120px;
-}
-
-h4 {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-}
-
-
-/* SETTINGS */
-
-.settings {
-    border: 1px solid lightgray
-}
-
-.settings select {
-    width: 80%;
-    margin: auto auto;
-    height: 40px;
-}
-
-.settings p {
-    margin-left: auto;
-    margin-right: auto;
-    width:80%;
-}
-
-.settings button {
-    width: 40%;
-    background-color: rgb(96, 97, 177);
-    border-radius: 5px;
-    border-style: none;
-    height: 40px;
-    margin: auto auto;
-}
-
-.settings select {
-    width: 80%;
+    width: 50px;
+    height: 50px;
+    margin:auto auto;
 }
