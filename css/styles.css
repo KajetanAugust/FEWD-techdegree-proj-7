@@ -77,9 +77,30 @@ nav {
 /* ////////////////////// */
 /* ///  SOCIAL STATS //// */
 /* ////////////////////// */
+.social-data {
+    border: 1px solid lightgray;
+    width: 80%;
+    margin: 40px auto 20px auto;
+}
+
+.count {
+    font-weight: 300;
+    font-size: x-large;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.name {
+    margin-bottom: 0;
+    margin-top:20px;
+    padding-bottom:0;
+}
 
 .logo {
     width: 50px;
     height: 50px;
-    margin:auto auto;
+    margin:auto;
+    background-color: lightskyblue;
+    padding:10px 10px;
+    border-radius: 50%;
 }
