@@ -84,19 +84,6 @@ nav {
 /* ////////////////////// */
 
 
-.traffic, 
-.bar-graph, 
-.donut, 
-.social-stats, 
-.new-members, 
-.recent, 
-.message, 
-.settings {
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-
 .traffic {
     grid-area:traffic;
 }

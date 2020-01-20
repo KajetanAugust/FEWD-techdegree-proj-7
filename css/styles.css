@@ -7,6 +7,18 @@
     font-family: 'Lato', sans-serif;
 }
 
+.traffic, 
+.bar-graph, 
+.donut, 
+.social-stats, 
+.new-members, 
+.recent, 
+.message, 
+.settings {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /* ////////////////////// */
 /* //////  HEADER  ////// */
 /* ////////////////////// */
@@ -63,6 +75,16 @@ nav {
 /* /////  TRAFFIC  ////// */
 /* ////////////////////// */
 
+.time-period {
+    width: 80%;
+    margin:auto auto;
+}
+
+.traffic-container {
+    width:90%;
+    height:70%;
+    margin:auto auto;
+}
 
 /* ////////////////////// */
 /* ////  BAR GRAPH  ///// */

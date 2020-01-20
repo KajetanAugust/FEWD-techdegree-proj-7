@@ -36,7 +36,31 @@
 
             <div class="traffic">
                 <h4>TRAFFIC</h4>
-                    
+
+                <!-- SWITCHES -->
+                    <div class="switch-toggle switch-candy-yellow time-period">
+                      <input id="hour" name="view" type="radio" checked>
+                      <label for="hour" onclick="">HOURLY</label>
+                  
+                      <input id="day" name="view" type="radio">
+                      <label for="day" onclick="">DAILY</label>
+                  
+                      <input id="week" name="view" type="radio">
+                      <label for="week" onclick="">WEEKLY</label>
+
+                      <input id="month" name="view" type="radio">
+                      <label for="month" onclick="">MONTHLY</label>
+                  
+                      <a></a>
+                    </div>
+                <!-- SWITCHES -->
+
+                <!-- GRAPH -->
+                <div class="traffic-container">
+                <canvas id="myChart" width="300" height="50"></canvas>
+                <script src="scripts/traffic-graph.js"></script>
+                </div>
+
             </div>
             <div class="bar-graph">
                 <h4>DAILY TRAFFIC</h4>
@@ -81,7 +105,7 @@
             <div class="settings">
                 <h4>SETTINGS</h4>
                 <p class="notifications" >Send Email Notifications</p>
-                <label class="switch-light switch-ios switch1" onclick="">
+                <label class="switch-light switch-candy" onclick="">
                     <input type="checkbox">
                   
                     <strong>
@@ -95,7 +119,7 @@
                     </span>
                   </label>
                 <p class="set-public">Set Profile to Public</p>
-                <label class="switch-light switch-ios switch2" onclick>
+                <label class="switch-light switch-candy" onclick="">
                     <input type="checkbox">
                   
                     <strong>
