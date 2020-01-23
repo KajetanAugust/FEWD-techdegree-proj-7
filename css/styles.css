@@ -58,13 +58,7 @@ header p {
 /* ///////  NAV  //////// */
 /* ////////////////////// */
 
-nav {
-    background-color: rgb(40, 65, 94);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-}
+
 
 .icon {
     max-height: 40%;
@@ -100,6 +94,7 @@ nav {
 /* ////////////////////// */
 /* ///  SOCIAL STATS //// */
 /* ////////////////////// */
+
 .social-data {
     border: 1px solid lightgray;
     width: 80%;

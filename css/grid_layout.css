@@ -37,10 +37,16 @@ header {
 }
 
 nav {
+    grid-area: nav;
     position: sticky;
     width: 100%;
     height: 60px;
     top: 60px;
+    background-color: rgb(40, 65, 94);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
 }
 
 /* SOCIAL GRID */
@@ -54,7 +60,7 @@ nav {
     "logo count";
 }
 
-.logo   {
+.logo {
     grid-area: logo;
 }
 .name {
@@ -65,14 +71,61 @@ nav {
     grid-area:count;
 }
 
-
 /* ////////////////////// */
 /* ////  MEDIA QUERY  /// */
 /* ////////////////////// */
 
 @media(min-width: 768px) {
 
+    body{
+        display: grid;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas: 
+        " header "
+        " main   ";
+    }
+    
+    main {
+        grid-area: main;
+        display:grid;
+        grid-template-columns: 60px 1fr 1fr;
+        grid-template-rows: repeat(5, 350px) ;
+        grid-template-areas: 
+        " nav traffic traffic"
+        " nav bar donut"
+        " nav social social"
+        " nav newmembers recent"
+        " nav message settings"
+    }
+    
+    header {
+        position: sticky;
+        width: 100%;
+        height: 60px;
+        top: 0;
+    }
+    
+
+    /* NAV STYLING */
+
+    nav {
+        position: sticky;
+        width: 60px ;
+        height: auto;
+        left: 0;
+        background-color: rgb(40, 65, 94);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .icon {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 }
+
 
 @media(min-width: 1024px) {
     
@@ -86,20 +139,22 @@ nav {
 
 .traffic {
     grid-area:traffic;
+    background-color: teal;
 }
 
 .bar-graph {
     grid-area:bar;
-    
+    background-color: green;
 }
 
 .donut {
     grid-area:donut;
-    
+    background-color: pink;
 }
 
 .social-stats {
     grid-area:social;
+    background-color: saddlebrown;
 }
 
 .new-members {
@@ -114,15 +169,17 @@ nav {
 
 .message {
     grid-area:message;
+    background-color: red;
 }
 
 .settings {
     grid-area:settings;
+    background-color: yellow;
 }
 
 
 /* ////////////////////// */
-/* // DETTINGS SELECTORS /*/
+/* // SETTINGS SELECTORS /*/
 /* ////////////////////// */
 
 .settings h4 {
