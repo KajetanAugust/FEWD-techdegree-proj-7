@@ -259,6 +259,9 @@
     background-color: #38a3d4; }
   .switch-candy-yellow a {
     background-color: #f5e560; }
+  .switch-candy-teal a {
+    background-color: rgb(102, 178, 178);
+  }
   /* iOS Theme
 */
   .switch-ios.switch-light span span {
