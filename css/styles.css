@@ -5,7 +5,7 @@
 
 * {
     font-family: 'Lato', sans-serif;
-    /* color: lightgray; */
+    max-width: 100%;
 }
 
 .traffic, 
@@ -92,6 +92,25 @@ header p {
 }
 
 /* ////////////////////// */
+/* // TITLE AND SEARCH // */
+/* ////////////////////// */
+
+.title-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left:20px;
+    margin-right: 20px;
+    align-content: center;
+}
+
+.title-search input {
+    height: 30px;
+    width: 40%;
+    align-self: center;
+}
+
+/* ////////////////////// */
 /* /////  TRAFFIC  ////// */
 /* ////////////////////// */
 
@@ -134,19 +153,25 @@ header p {
     border: 1px solid lightgray;
     width: 80%;
     margin: 40px auto 20px auto;
+    height:100px;
+    padding-left: 80px;
+    background-color: rgba(200, 219, 239, .1);
+    
 }
 
 .count {
     font-weight: 300;
-    font-size: x-large;
+    font-size: 2rem;
     margin-top: 0;
     padding-top: 0;
+    margin-bottom:20px;
 }
 
 .name {
     margin-bottom: 0;
-    margin-top:20px;
+    margin-top:auto;
     padding-bottom:0;
+    
 }
 
 .logo {
@@ -243,7 +268,7 @@ header p {
 .search-usr,
 .message-usr {
     border: solid 1px lightgray;
-    background-color: rgba(200, 219, 239, .2);
+    background-color: rgba(200, 219, 239, .1);
 }
 
 .search-usr {

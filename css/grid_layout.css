@@ -14,14 +14,14 @@ main {
     grid-area: main;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px repeat(6, 300px)  repeat(4, 350px);
+    grid-template-rows: repeat(2, 60px) repeat(5, 300px)  repeat(4, 350px);
     grid-template-areas: 
     " nav "
+    " title-search "
     " traffic "
     " bar "
     " donut"
     " social "
-    " social"
     " social"
     " newmembers"
     " recent"
@@ -89,8 +89,9 @@ nav {
         grid-area: main;
         display:grid;
         grid-template-columns: 60px 1fr 1fr;
-        grid-template-rows: repeat(5, 350px) ;
-        grid-template-areas: 
+        grid-template-rows: 60px repeat(5, 350px) ;
+        grid-template-areas:
+        "nav title-search title-search" 
         " nav traffic traffic"
         " nav bar donut"
         " nav social social"
@@ -124,7 +125,13 @@ nav {
         margin-top: 20px;
         margin-bottom: 10px;
     }
+
+    /* SOCIAL STYLE */
+
+    
+
 }
+
 
 
 @media(min-width: 1024px) {
@@ -136,6 +143,9 @@ nav {
 /* /////  SELECTORS  //// */
 /* ////////////////////// */
 
+.title-search {
+    grid-area: title-search;
+}
 
 .traffic {
     grid-area:traffic;
