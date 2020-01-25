@@ -139,22 +139,18 @@ nav {
 
 .traffic {
     grid-area:traffic;
-    background-color: teal;
 }
 
 .bar-graph {
     grid-area:bar;
-    background-color: green;
 }
 
 .donut {
     grid-area:donut;
-    background-color: pink;
 }
 
 .social-stats {
     grid-area:social;
-    background-color: saddlebrown;
 }
 
 .new-members {
