@@ -299,18 +299,30 @@ header p {
     flex-wrap: wrap;
     width: 80%;
     align-content: space-around;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-left: 25px;
     height: 135px;
     margin-bottom: 42px;
 }
 
 .switch-light {
-    width: 50%;
+    width: 40%;
     align-self: center;
-    padding-right: 25px;
-    padding-left: 25px;
+    /* padding-right: 25px; */
+    /* padding-left: 25px; */
     justify-self: flex-end;
+    margin-right: 0;
+}
+@media(min-width: 768px) {
+    .switch-light {
+        width:30%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .switch-light{
+        width:60%;
+    }
 }
 
 .settings-buttons {
@@ -334,10 +346,12 @@ header p {
     border-radius: 5px;
     border: solid 1px rgb(62, 91, 125);
     margin-top:20px;
+    color:white;
 }
 
 .settings button:last-child {
     background-color: lightgray;
     border: 1px solid lightgray;
     margin-left: 10px;
+    color: rgb(62, 91, 125);
 }
