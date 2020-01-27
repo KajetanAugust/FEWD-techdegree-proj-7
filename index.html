@@ -60,7 +60,17 @@
                 </div>
                 <!-- TRAFFIC GRAPH -->
                 <div class="traffic-container">
-            
+                    <script>
+                    new Chartist.Line('.traffic-container', {
+                        labels: [1, 2, 3, 4, 5, 6, 7, 8],
+                        series: [
+                          [5, 9, 7, 8, 5, 3, 5, 4]
+                        ]
+                      }, {
+                        low: 0,
+                        showArea: true
+                      });
+                    </script>
                 </div>
                 <!-- TRAFFIC GRAPH -->
                 
@@ -70,7 +80,18 @@
 
                 <!-- BAR GRAPH -->
                 <div class="bar-graph-container">
-            
+                       <script>
+                    new Chartist.Bar('.bar-graph-container', {
+                        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                        series: [50, 75, 150, 100, 200, 175, 75]
+                    }, {
+                        
+                        width: 500,
+                        height: 240,
+
+                        distributeSeries: true
+                    });
+                </script>
                 </div>
                 <!-- BAR GRAPH -->
 
