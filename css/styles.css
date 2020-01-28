@@ -135,6 +135,20 @@ header p {
     margin:auto auto;
 }
 
+.traffic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.time-period {
+    justify-self: flex-end;
+    margin-right: 0;
+}
+
+
 /* ////////////////////// */
 /* ////  BAR GRAPH  ///// */
 /* ////////////////////// */
@@ -305,28 +319,19 @@ header p {
     justify-content: space-between;
     margin-left: 25px;
     height: 135px;
-    margin-bottom: 42px;
+    margin-bottom: 23px;
+}
+.switches p {
+    width: 50%;
 }
 
 .switch-light {
-    width: 40%;
+    width: 30%;
     align-self: center;
-    /* padding-right: 25px; */
-    /* padding-left: 25px; */
     justify-self: flex-end;
     margin-right: 0;
 }
-@media(min-width: 768px) {
-    .switch-light {
-        width:30%;
-    }
-}
 
-@media(min-width: 1024px) {
-    .switch-light{
-        width:60%;
-    }
-}
 
 .settings-buttons {
     display: flex;
@@ -338,8 +343,16 @@ header p {
 }
 
 .settings select {
-    width:93.5%;
+    text-align: left;
+    width: 93.5%;
     height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(235, 236, 238, 0.8);
+    color: rgb(152, 157, 162);
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
 }
 
 .settings button {
@@ -357,4 +370,64 @@ header p {
     border: 1px solid lightgray;
     margin-left: 10px;
     color: rgb(62, 91, 125);
+}
+
+
+/* ////////////////////// */
+/* //// MEDIA QUERIES /// */
+/* ////////////////////// */
+
+
+@media(min-width: 768px) {
+    .switch-light {
+        width:30%;
+    }
+
+    .recent .name-email {
+        font-size: 0.78rem;
+    }
+
+    .social-widget-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social-data {
+        width: 30%;
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+
+    .name, 
+    .count {
+        margin-left: 20px;
+    }
+
+   
+}
+
+@media(min-width: 1024px) {
+    .switches p {
+        width: 30%;
+    }
+    .switch-light{
+        width:60%;
+    }
+
+    .recent .name-email {
+        font-size: 0.9rem;
+    }
+
+    .social-data {
+        width: 30%;
+        padding-left: 100;
+        padding-right:auto;
+        
+    }
+
+    .name, 
+    .count {
+        margin-left: 10px;
+    }
+
 }

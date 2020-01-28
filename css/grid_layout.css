@@ -89,7 +89,7 @@ nav {
         grid-area: main;
         display:grid;
         grid-template-columns: 60px 1fr 1fr;
-        grid-template-rows: 60px repeat(5, 350px) ;
+        grid-template-rows: 60px repeat(2, 350px) 250px repeat(2, 350px);
         grid-template-areas:
         "nav title-search title-search" 
         " nav traffic traffic"
