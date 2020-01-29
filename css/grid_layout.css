@@ -4,6 +4,7 @@
 
 body{
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: 60px 1fr;
     grid-template-areas: 
     " header "
@@ -13,8 +14,8 @@ body{
 main {
     grid-area: main;
     display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 60px) repeat(5, 300px)  repeat(4, 350px);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 60px) repeat(4, 300px) 200px 350px 400px repeat(2, 350px);
     grid-template-areas: 
     " nav "
     " title-search "
@@ -69,6 +70,12 @@ nav {
 
 .count {
     grid-area:count;
+}
+
+.social-widget-wrapper {
+    width: 90%;
+    margin-left:0;
+    margin-right: 0;
 }
 
 /* ////////////////////// */
