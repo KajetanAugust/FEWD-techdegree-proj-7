@@ -123,10 +123,11 @@ header p {
 /* ////////////////////// */
 
 .alert {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
     color: white;
-
     background-color: tomato;
     padding: 5px 10px;
     margin:15px 10px;
