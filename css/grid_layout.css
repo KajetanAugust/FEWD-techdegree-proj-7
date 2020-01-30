@@ -59,6 +59,7 @@ nav {
     grid-template-areas: 
     "logo name"
     "logo count";
+    justify-self: center;
 }
 
 .logo {
@@ -73,9 +74,13 @@ nav {
 }
 
 .social-widget-wrapper {
-    width: 90%;
-    margin-left:0;
-    margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width:90%;
 }
 
 /* ////////////////////// */

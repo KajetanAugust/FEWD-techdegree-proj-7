@@ -106,12 +106,16 @@ header p {
     margin-left:20px;
     margin-right: 20px;
     align-content: center;
+    
 }
 
 .title-search input {
     height: 30px;
     width: 40%;
     align-self: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 /* ////////////////////// */
@@ -173,11 +177,10 @@ header p {
 .social-data {
     border: 1px solid lightgray;
     width: 80%;
-    margin: 40px auto 20px auto;
+    margin: 20px auto 20px auto;
     height:100px;
-    padding-left: 80px;
+    padding-left: 50px;
     background-color: rgba(200, 219, 239, .1);
-    
 }
 
 .count {
@@ -186,13 +189,14 @@ header p {
     margin-top: 0;
     padding-top: 0;
     margin-bottom:20px;
+    padding-left:10px ;
 }
 
 .name {
     margin-bottom: 0;
     margin-top:auto;
     padding-bottom:0;
-    
+    padding-left:10px ;
 }
 
 .logo {
@@ -293,17 +297,28 @@ header p {
 .message-usr {
     border: solid 1px lightgray;
     background-color: rgba(200, 219, 239, .1);
+    padding-left: 5px;
 }
 
 .search-usr {
     height: 35px;
+    
 }
+
+/* .message-usr::placeholder,
+.search-usr::placeholder {
+    padding-left: 10px;
+    padding-top: 0;
+    margin-top: 0;
+} */
 
 .message-usr {
     margin-top: 20px;
     margin-bottom: 20px;
     height: 135px;
-    
+    padding-left: 5px;
+    padding-top: 10px;
+    resize: none;
 }
 
 .message button {
@@ -402,6 +417,11 @@ header p {
     .social-widget-wrapper {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 
     .social-data {
@@ -410,6 +430,10 @@ header p {
         margin-top: 20px;
         align-self: center;
         justify-self: center;
+    }
+
+    .logo{
+        margin-left: 30%;
     }
 
     .new-members div,
@@ -427,6 +451,9 @@ header p {
         margin-left: 20px;
     }
 
+    .settings-buttons {
+        margin-top:33px;
+    }
    
 }
 
@@ -446,7 +473,10 @@ header p {
         width: 30%;
         padding-left: 100;
         padding-right:auto;
-        
+    }
+
+    .logo{
+        margin-left: 40%;
     }
 
     .name, 
@@ -454,4 +484,5 @@ header p {
         margin-left: 10px;
     }
 
+    
 }
