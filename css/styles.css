@@ -104,13 +104,14 @@ header p {
     flex-direction: column;
     background-color: white;
     border: solid 1px lightgray;
-    width: auto;
+    width: 250px;
+    z-index: 100;
 }
 
 .notif {
+    height:30px;
     margin: 10px 10px;
     padding-bottom: 20px;
-    /* padding-top: 10px; */
     display: flex;
     flex-direction: row;
     border-bottom: solid 1px lightgray;
@@ -128,7 +129,6 @@ header p {
 
 .notif p {
     color:black;
-    flex-grow: 2;
 }
 
 .notif button {
@@ -414,13 +414,6 @@ header p {
     height: 35px;
     
 }
-
-/* .message-usr::placeholder,
-.search-usr::placeholder {
-    padding-left: 10px;
-    padding-top: 0;
-    margin-top: 0;
-} */
 
 .message-usr {
     margin-top: 20px;
