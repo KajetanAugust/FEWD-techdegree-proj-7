@@ -78,10 +78,72 @@ header p {
     background-size: 10px 10px;
 }
 
-.bell-icon path:hover {
-   
-    fill: rgb(249, 124, 124);
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    background: rgb(249, 124, 124);
 }
+
+.bell-icon path:hover {
+   fill: rgb(249, 124, 124);
+}
+
+
+/* ///////////////////////// */
+/* / NOTIFICATION DROPDOWN / */
+/* ///////////////////////// */
+
+.notification-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 250px;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border: solid 1px lightgray;
+    width: auto;
+}
+
+.notif {
+    margin: 10px 10px;
+    padding-bottom: 20px;
+    /* padding-top: 10px; */
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px lightgray;
+}
+
+.notification-dropdown .notif:first-child {
+    padding-top: 10px;
+}
+
+.notification-dropdown .notif:last-child {
+    padding-bottom: 10px;
+    border: none;
+}
+
+
+.notif p {
+    color:black;
+    flex-grow: 2;
+}
+
+.notif button {
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.notif button:hover {
+    background-color:rgb(249, 124, 124);
+}
+
+
+
 
 /* ////////////////////// */
 /* ///////  NAV  //////// */
@@ -119,20 +181,51 @@ header p {
 }
 
 /* ////////////////////// */
-/* /////  TRAFFIC  ////// */
+/* //////  ALERT  /////// */
 /* ////////////////////// */
 
 .alert {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: auto;
     color: white;
-    background-color: tomato;
+    background: rgb(249, 124, 124);
     padding: 5px 10px;
-    margin:15px 10px;
+    margin:10px 10px;
     border-radius: 5px;
 }
+.alert p {
+    flex-grow:2;
+    align-self: center;
+    justify-self: center;
+}
+
+.x-button {
+    background: rgb(249, 124, 124);
+    border:none;
+    color: white;
+    font-size: x-large;
+    align-self: center;
+    padding: 3px 25px 8px 12px;
+    height: auto;
+    width: 32px;
+    align-self: center;
+    padding:auto auto;
+    margin: auto auto;
+    border-radius: 5px;
+}
+
+.x-button:hover {
+    background-color: white;
+    color:rgb(249, 124, 124);
+}
+
+/* ////////////////////// */
+/* /////  TRAFFIC  ////// */
+/* ////////////////////// */
+
+
 
 .time-period {
     width: 80%;
@@ -418,6 +511,19 @@ header p {
 
 
 @media(min-width: 768px) {
+
+    .badge {
+        position: absolute;
+        top: 10px;
+        right: 230px;
+    }
+
+    .alert {
+        
+        padding: 5px 10px;
+        margin:5px 10px;
+        border-radius: 5px;
+    }
 
     header p {  
         display:inline;

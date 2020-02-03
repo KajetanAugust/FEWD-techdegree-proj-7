@@ -15,10 +15,11 @@ main {
     grid-area: main;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2, 60px) repeat(4, 300px) 200px 350px 400px repeat(2, 350px);
+    grid-template-rows: repeat(2, 60px) auto repeat(4, 300px) 200px 350px 400px repeat(2, 350px);
     grid-template-areas: 
     " nav "
     " title-search "
+    " alert "
     " traffic "
     " bar "
     " donut"
@@ -101,9 +102,10 @@ nav {
         grid-area: main;
         display:grid;
         grid-template-columns: 60px 1fr 1fr;
-        grid-template-rows: 60px repeat(2, 350px) 250px repeat(2, 350px);
+        grid-template-rows: 60px auto repeat(2, 350px) 250px repeat(2, 350px);
         grid-template-areas:
         "nav title-search title-search" 
+        "nav alert alert"
         " nav traffic traffic"
         " nav bar donut"
         " nav social social"
@@ -155,8 +157,14 @@ nav {
 /* /////  SELECTORS  //// */
 /* ////////////////////// */
 
+
+
 .title-search {
     grid-area: title-search;
+}
+
+.alert {
+    grid-area: alert;
 }
 
 .traffic {
