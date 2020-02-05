@@ -49,6 +49,7 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
+    z-index: 0;
 }
 
 /* SOCIAL GRID */
@@ -133,6 +134,7 @@ nav {
         flex-direction: column;
         justify-content: flex-start;
         align-content: center;
+        z-index: 0;
     }
 
     .icon {

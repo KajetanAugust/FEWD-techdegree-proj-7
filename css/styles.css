@@ -27,12 +27,13 @@
 /* ////////////////////// */
 
 header {
+    position: fixed;
     background-color: rgb(62, 91, 125);
     display:flex;
     align-items: center;
     justify-content: space-around;
     color: white;
-    z-index: 0;
+    z-index: 1;
     margin-right: 0;
     margin-left: 0;
 }
@@ -96,39 +97,44 @@ header p {
 /* / NOTIFICATION DROPDOWN / */
 /* ///////////////////////// */
 
-.notification-dropdown {
-    position: absolute;
-    top: 40px;
-    right: 250px;
+#notification-dropdown {
+    position: fixed;
+    top: 50px;
+    right: 100px;
     display: none;
     flex-direction: column;
     background-color: white;
     border: solid 1px lightgray;
-    width: 250px;
-    z-index: 100;
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+    z-index: 10;
 }
-
 .notif {
     height:30px;
     margin: 10px 10px;
     padding-bottom: 20px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     border-bottom: solid 1px lightgray;
+    z-index: 100;
 }
 
-.notification-dropdown .notif:first-child {
+#notification-dropdown .notif:first-child {
     padding-top: 10px;
 }
 
-.notification-dropdown .notif:last-child {
+#notification-dropdown .notif:last-child {
     padding-bottom: 10px;
     border: none;
 }
 
-
 .notif p {
     color:black;
+    flex-grow:2;
+    display: inline-block;
 }
 
 .notif button {
@@ -136,13 +142,12 @@ header p {
     background-color: white;
     border-radius: 5px;
     padding: 5px 10px;
+    width:10%;
 }
 
 .notif button:hover {
     background-color:rgb(249, 124, 124);
 }
-
-
 
 
 /* ////////////////////// */
@@ -509,6 +514,18 @@ header p {
         position: absolute;
         top: 10px;
         right: 230px;
+    }
+
+    #notification-dropdown {
+        position: absolute;
+        top: 40px;
+        right: 250px;
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        border: solid 1px lightgray;
+        width: 300px;
+        z-index: 10;
     }
 
     .alert {
