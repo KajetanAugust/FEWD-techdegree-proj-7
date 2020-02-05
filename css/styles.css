@@ -99,8 +99,8 @@ header p {
 
 #notification-dropdown {
     position: fixed;
-    top: 50px;
-    right: 100px;
+    top: 55px;
+    right: 10px;
     display: none;
     flex-direction: column;
     background-color: white;
@@ -253,7 +253,7 @@ header p {
 }
 
 .traffic-container {
-    width:90%;
+    width:100%;
     height:70%;
     margin:auto auto;
 }
@@ -271,6 +271,26 @@ header p {
     margin-right: 0;
 }
 
+
+
+.ct-series-a .ct-line,
+.ct-series-a .ct-point,
+.ct-series .ct-bar {
+  stroke: rgb(102, 178, 178);
+}
+
+.ct-area {
+    background-color: rgb(102, 178, 178);
+}
+
+.ct-label {
+    font-size: x-small;
+}
+
+.ct-labels {
+    display:flex;
+    justify-content: space-between;
+}
 
 /* ////////////////////// */
 /* ////  BAR GRAPH  ///// */
@@ -507,7 +527,6 @@ header p {
 /* //// MEDIA QUERIES /// */
 /* ////////////////////// */
 
-
 @media(min-width: 768px) {
 
     .badge {
@@ -518,8 +537,8 @@ header p {
 
     #notification-dropdown {
         position: absolute;
-        top: 40px;
-        right: 250px;
+        top: 45px;
+        right: 230px;
         display: none;
         flex-direction: column;
         background-color: white;
@@ -563,6 +582,10 @@ header p {
         margin-top: 20px;
         align-self: center;
         justify-self: center;
+    }
+
+    .traffic-container {
+        padding-top:20px;
     }
 
     .logo{
