@@ -271,8 +271,6 @@ header p {
     margin-right: 0;
 }
 
-
-
 .ct-series-a .ct-line,
 .ct-series-a .ct-point,
 .ct-series .ct-bar {
@@ -338,7 +336,6 @@ header p {
     margin: auto 10px auto 30px;
 }
 
-
 .color-square {
     width:20px;
     height:20px;
@@ -362,9 +359,9 @@ header p {
 
 
 .color-label {
-    grid-area: color-label;
     padding-left: 5px;
     align-self: center;
+    font-size: small;
 }
 
 /* ////////////////////// */
@@ -614,6 +611,10 @@ header p {
         padding: 5px 10px;
         margin:5px 10px;
         border-radius: 5px;
+    }
+
+    .color-label {
+        font-size: medium;
     }
 
     header p {  
