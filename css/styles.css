@@ -279,8 +279,8 @@ header p {
   stroke: rgb(102, 178, 178);
 }
 
-.ct-area {
-    background-color: rgb(102, 178, 178);
+.ct-series-a .ct-area {
+    fill: rgb(102, 178, 178);
 }
 
 .ct-label {
@@ -304,6 +304,68 @@ header p {
 /* /////  DOUGHNUT  ///// */
 /* ////////////////////// */
 
+
+.doughnut-container {
+    width:60%;
+    
+}
+
+.ct-series-a .ct-slice-donut-solid {
+    fill: rgb(0, 128, 128);
+}
+
+.ct-series-b .ct-slice-donut-solid {
+    fill:rgb(178, 216, 216);
+}
+
+.ct-series-c .ct-slice-donut-solid {
+    fill: rgb(102, 178, 178);
+}
+
+.doughnut-label-wrap {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+}
+
+
+.doughnut-labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100px;
+    padding: auto auto;
+    margin: auto 10px auto 30px;
+}
+
+
+.color-square {
+    width:20px;
+    height:20px;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.color-square:nth-child(1) {
+    background: rgb(178, 216, 216);
+
+} 
+
+.color-square:nth-child(3) {
+    background: rgb(102, 178, 178);
+} 
+
+.color-square:nth-child(5) {
+    background: rgb(0, 128, 128);
+
+} 
+
+
+.color-label {
+    grid-area: color-label;
+    padding-left: 5px;
+    align-self: center;
+}
 
 /* ////////////////////// */
 /* ///  SOCIAL STATS //// */

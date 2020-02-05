@@ -86,19 +86,7 @@
                 </div>
                 <!-- TRAFFIC GRAPH -->
                 <div class="traffic-container">
-                    
-                    <script>
-                    new Chartist.Line('.traffic-container', {
-                        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-30", "4-10", "11-17", "18-24", "25-31"],
-                        series: [
-                          [500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000 ]
-                        ]
-                      }, {
-                        scaleMinSpace: 200,
-                        showArea: true,
-                        width: 1000,
-                      });
-                    </script>
+                    <script src="scripts/traffic-chart.js"></script>
                 </div>
                 <!-- TRAFFIC GRAPH -->
                 
@@ -108,18 +96,7 @@
 
                 <!-- BAR GRAPH -->
                 <div class="bar-graph-container">
-                       <script>
-                    new Chartist.Bar('.bar-graph-container', {
-                        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-                        series: [50, 75, 150, 100, 200, 175, 75]
-                    }, {
-                        
-                        width: 500,
-                        height: 240,
-
-                        distributeSeries: true
-                    });
-                </script>
+                       <script src="scripts/daily-graph.js"></script>
                 </div>
                 <!-- BAR GRAPH -->
 
@@ -127,7 +104,16 @@
             <div class="donut">
                 <h4>MOBILE USERS</h4>
                 <!-- MOBILE GRAPH -->
-                
+                <div class="doughnut-label-wrap">
+                    <div class="doughnut-container">
+                        <script src="scripts/mobile-doughnut.js"></script>
+                    </div>
+                    <div class="doughnut-labels">
+                        <p class="color-square"></p> <p class="color-label">Phones</p>
+                        <p class="color-square"></p> <p class="color-label">Tablets</p>
+                        <p class="color-square"></p> <p class="color-label">Desktop</p>
+                    </div>
+                </div>
             </div>
 
             <!-- SOCIAL STATS-->
