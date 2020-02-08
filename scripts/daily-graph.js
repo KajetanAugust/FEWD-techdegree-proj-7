@@ -3,8 +3,6 @@ new Chartist.Bar('.bar-graph-container', {
     series: [50, 75, 150, 100, 200, 175, 75]
 }, {
     
-    width: 500,
-    height: 240,
 
     distributeSeries: true
 });

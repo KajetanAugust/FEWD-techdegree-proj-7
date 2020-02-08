@@ -4,6 +4,9 @@ new Chartist.Line('.traffic-container', {
       [500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000, 1500, 2000 ]
     ]
   }, {
-    scaleMinSpace: 200,
-    showArea: true
+    high: 2000,
+    low: 0,
+    scaleMinSpace: 5,
+    showArea: true,
+    fullWidth: true
   });
