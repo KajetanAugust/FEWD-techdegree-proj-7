@@ -70,12 +70,22 @@ header p {
     height: auto;
     width: 30px;
     align-self: center;
-    
-    
 }
+
+
 .bell-icon path {
-    background-size: 10px 10px;
+    fill:white;
+    transition: stroke .5s ease;
+    fill:white;
+    stroke-width: 0px;
+    stroke:white;
 }
+
+.bell-icon path:hover {
+    fill: rgb(249, 124, 124);
+    stroke: rgb(249, 124, 124);
+    stroke-width: 3px;
+ }
 
 .badge {
     position: absolute;
@@ -84,10 +94,6 @@ header p {
     padding: 5px 5px;
     border-radius: 50%;
     background: rgb(249, 124, 124);
-}
-
-.bell-icon path:hover {
-   fill: rgb(249, 124, 124);
 }
 
 /* ///////////////////////// */
@@ -156,7 +162,6 @@ header p {
     max-width: 40%;
     align-self: center;
 }
-
 
 /* ////////////////////// */
 /* // TITLE AND SEARCH // */
@@ -275,7 +280,6 @@ header p {
 /* ////////////////////// */
 /* /////  DOUGHNUT  ///// */
 /* ////////////////////// */
-
 
 .doughnut-container {
     width:60%;
@@ -439,7 +443,6 @@ header p {
     align-self: center;
 }
 
-
 .members-profile-pictures {
     border-radius: 50%;
     max-height: 40px;
@@ -474,7 +477,6 @@ header p {
 
 .search-usr {
     height: 35px;
-    
 }
 
 .message-usr {
@@ -492,6 +494,31 @@ header p {
     background-color: rgb(62, 91, 125);
     border: solid 1px rgb(62, 91, 125);
 }
+
+
+.fail::-webkit-input-placeholder {
+    color: white;
+ }
+
+.overlay {
+     flex-direction: column;
+     display:none;
+     align-items: center;
+     justify-content: space-around;
+     background-color: rgb(102, 178, 178);
+     width:100%;
+     height: 77%;
+     border-radius: 5px;
+ }
+
+.overlay p {
+     font-size: 2rem;
+     color: white;
+ }
+
+.overlay button {
+     width:20%;
+ }
 
 /* ////////////////////// */
 /* /////  SETTINGS ////// */
@@ -696,6 +723,4 @@ header p {
     .count {
         margin-left: 10px;
     }
-
-    
 }

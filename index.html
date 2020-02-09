@@ -18,7 +18,6 @@
 
     <body>
 
-
         <header>
             <h1>WebApp</h1>
             <!-- <img src="icons/icon-bell.svg" class="bell-icon" alt="Bell icon"> -->
@@ -213,11 +212,26 @@
 
             <div class="message">
                 <h4>MESSAGE USER</h4>
-                <div class="contact-form">
+
+                <div class="overlay">
+                    <p>MESSAGE SENT</p>
+                    <button>CLOSE</button>
+                </div>
+                <form class="contact-form">
+                    
                     <input class="search-usr" type="text" placeholder="Search for User">
                     <textarea class="message-usr" type="textarea" placeholder="Message for User"></textarea>
-                    <button type="submit">SEND</button>
-                </div>
+                    <button type="submit">SEND</input>
+                    
+                </form>
+
+                <!-- <div id="autocomplete">
+                        <p class="name-email">Victoria Chambers</p>
+                        <p class="name-email">Dale Byrd</p>
+                        <p class="name-email">Dawn Wood</p>
+                        <p class="name-email">Dan Oliver</p>
+                
+                </div> -->
             </div>
             
             <div class="settings">
@@ -225,7 +239,7 @@
                 <div class="switches">
                     <p class="notifications" >Send Email Notifications</p>
                     <label class="switch-light switch-candy" onclick="">
-                        <input type="checkbox">
+                        <input type="checkbox" class="notif-switch">
                     
                         <!-- <strong>
                         Send Email Notifications
@@ -240,7 +254,7 @@
 
                     <p class="set-public">Set Profile to Public</p>
                     <label class="switch-light switch-candy" onclick="">
-                        <input type="checkbox">
+                        <input type="checkbox" class="public-switch">
                     
                         <!-- <strong>
                             Set Profile to Public
