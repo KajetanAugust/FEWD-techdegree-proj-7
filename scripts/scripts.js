@@ -23,9 +23,13 @@ const formOverlayButton = document.querySelector('.overlay button');
 
 //SETTING LOCAL STORAGE VALUE
 
-const settingsNotifSwitch = document.querySelector('.notif-switch');
-const settingsPublicSwitch = document.querySelector('.public-switch');
-const settingsTimeZone = document.querySelector('.settings-buttons select');
+const settingsNotifSwitch = document.querySelector('.notif-switch').value;
+const settingsPublicSwitch = document.querySelector('.public-switch').value;
+const settingsTimeZone = document.querySelector('.settings-buttons select').value;
+// const settingsTimeZoneValue = settingsTimeZone.getAttribute('value');
+const saveBtn = document.querySelector('.save-btn');
+const cancelBtn = document.querySelector('.cancel-btn');
+
 
 closingButton.addEventListener('click', () =>{
     alertDiv.style.display = 'none';
@@ -105,4 +109,14 @@ for(let i=0; i<3; i++) {
 
     //SETTINGS SAVING
 
-    
+    // saveBtn.addEventListener('click', () => {
+    //     sessionStorage.setItem('Send notifications', settingsNotifSwitch);
+    //     sessionStorage.setItem('Set profile to public', settingsPublicSwitch);
+    //     sessionStorage.setItem('Time zone', settingsTimeZone);
+    // })
+
+    // cancelBtn.addEventListener('click', () => {
+    //     sessionStorage.setItem('Send notifications', '');
+    //     sessionStorage.setItem('Set profile to public', '');
+    //     sessionStorage.setItem('Time zone', '');
+    // })
