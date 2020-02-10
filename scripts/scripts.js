@@ -12,7 +12,7 @@ const bellBadge = document.querySelector('.badge');
 const notXLength = notifX.length;
 let notifCount = 0;
 
-// FORM SELECTORS
+// MESSAGES FORM SELECTORS
 
 const formName = document.querySelector('.contact-form input');
 const formText = document.querySelector('.contact-form textarea');
@@ -20,6 +20,11 @@ const formButton = document.querySelector('.contact-form button');
 const formDiv = document.querySelector('.contact-form');
 const formOverlay = document.querySelector('.overlay');
 const formOverlayButton = document.querySelector('.overlay button');
+
+//AUTOCOMPLETE
+
+const autocompleteWindow = document.querySelector('#autocomplete');
+const autocompletePersons = document.querySelectorAll('#autocomplete p');
 
 //SETTING LOCAL STORAGE VALUE
 
@@ -30,10 +35,7 @@ let settingsPublicSwitchValue ="off";
 const settingsTimeZone = document.querySelector('.settings-buttons select');
 const saveBtn = document.querySelector('.save-btn');
 const cancelBtn = document.querySelector('.cancel-btn');
-
-// const selected = document.querySelector
-
-//
+const settingsForm = document.querySelector('.settings-form');
 
 
 closingButton.addEventListener('click', () =>{
@@ -110,7 +112,6 @@ for(let i=0; i<3; i++) {
         formDiv.style.display = 'flex';
         sessionStorage.setItem('message','notSent');
     })
-    
 
     //SETTINGS SAVING
 
@@ -134,16 +135,60 @@ for(let i=0; i<3; i++) {
         }
     })
 
-    saveBtn.addEventListener('click', () => {
+    saveBtn.addEventListener('click', (e) => {
+        if(e.target === saveBtn )
         sessionStorage.setItem('Send notifications', settingsNotifSwitchValue);
         sessionStorage.setItem('Set profile to public', settingsPublicSwitchValue);
         sessionStorage.setItem('Time zone', settingsTimeZone.value);
+        e.preventDefault();
     })
 
     cancelBtn.addEventListener('click', () => {
         sessionStorage.setItem('Send notifications', '');
         sessionStorage.setItem('Set profile to public', '');
         sessionStorage.setItem('Time zone', '');
+        settingsForm.reset()
+
     })
 
 
+    //AUTOCOMPLETE 
+
+    autocompleteWindow.className = 'hidden';
+
+    formName.addEventListener('click', () => {
+        autocompleteWindow.style.display = 'flex';
+        autocompleteWindow.className = 'visible';
+
+    })
+
+    for(let i=0; i <= autocompletePersons.length; i++) {
+        autocompleteWindow.addEventListener('click', (e) => {
+            if(e.target.className == 'hint'){
+                formName.value = e.target.textContent
+            }
+        })
+    }
+
+
+    if(autocompleteWindow.className.includes('visible')){
+        document.addEventListener('click', (e) =>{
+                const autoClicked = e.target.className;
+                if(autoClicked.includes('visible') != true){
+                    autocompleteWindow.className = 'hidden'
+                    autocompleteWindow.style.display = 'none';
+                }  
+        })
+    }
+
+    // document.addEventListener('click', (e) =>{
+    //     const clicked = e.target.className;
+    //     if(clicked.includes('visible') != true){
+    //         autocompleteWindow.className = 'hidden';
+    //         autocompleteWindow.display = 'none';
+            
+    //         for(let i=0; i<notifChild.length; i++){
+    //             autocompleteWindow.remove("visible");
+    //         }
+    //     }
+    // })
