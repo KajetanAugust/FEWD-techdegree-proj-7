@@ -23,12 +23,17 @@ const formOverlayButton = document.querySelector('.overlay button');
 
 //SETTING LOCAL STORAGE VALUE
 
-const settingsNotifSwitch = document.querySelector('.notif-switch').value;
-const settingsPublicSwitch = document.querySelector('.public-switch').value;
-const settingsTimeZone = document.querySelector('.settings-buttons select').value;
-// const settingsTimeZoneValue = settingsTimeZone.getAttribute('value');
+const settingsNotifSwitch = document.querySelector('.notif-switch');
+let settingsNotifSwitchValue ="off";
+const settingsPublicSwitch = document.querySelector('.public-switch');
+let settingsPublicSwitchValue ="off";
+const settingsTimeZone = document.querySelector('.settings-buttons select');
 const saveBtn = document.querySelector('.save-btn');
 const cancelBtn = document.querySelector('.cancel-btn');
+
+// const selected = document.querySelector
+
+//
 
 
 closingButton.addEventListener('click', () =>{
@@ -103,20 +108,42 @@ for(let i=0; i<3; i++) {
     formOverlayButton.addEventListener('click', () => {
         formOverlay.style.display = 'none';
         formDiv.style.display = 'flex';
-        sessionStorage.setItem('message','notSend');
+        sessionStorage.setItem('message','notSent');
     })
     
 
     //SETTINGS SAVING
 
-    // saveBtn.addEventListener('click', () => {
-    //     sessionStorage.setItem('Send notifications', settingsNotifSwitch);
-    //     sessionStorage.setItem('Set profile to public', settingsPublicSwitch);
-    //     sessionStorage.setItem('Time zone', settingsTimeZone);
-    // })
+    settingsNotifSwitch.addEventListener('click', () =>{
+        if(settingsNotifSwitch.classList.length == 1){
+            settingsNotifSwitch.classList.add('on');
+            settingsNotifSwitchValue = "on"
+        } else if(settingsNotifSwitch.classList.length > 1){
+            settingsNotifSwitch.classList.remove('on');
+            settingsNotifSwitchValue = "off"
+        }
+    })
 
-    // cancelBtn.addEventListener('click', () => {
-    //     sessionStorage.setItem('Send notifications', '');
-    //     sessionStorage.setItem('Set profile to public', '');
-    //     sessionStorage.setItem('Time zone', '');
-    // })
+    settingsPublicSwitch.addEventListener('click', () =>{
+        if(settingsPublicSwitch.classList.length == 1){
+            settingsPublicSwitch.classList.add('on');
+            settingsPublicSwitchValue = "on"
+        } else if(settingsPublicSwitch.classList.length > 1){
+            settingsPublicSwitch.classList.remove('on');
+            settingsPublicSwitchValue = "off"
+        }
+    })
+
+    saveBtn.addEventListener('click', () => {
+        sessionStorage.setItem('Send notifications', settingsNotifSwitchValue);
+        sessionStorage.setItem('Set profile to public', settingsPublicSwitchValue);
+        sessionStorage.setItem('Time zone', settingsTimeZone.value);
+    })
+
+    cancelBtn.addEventListener('click', () => {
+        sessionStorage.setItem('Send notifications', '');
+        sessionStorage.setItem('Set profile to public', '');
+        sessionStorage.setItem('Time zone', '');
+    })
+
+
