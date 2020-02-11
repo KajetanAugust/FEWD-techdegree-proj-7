@@ -524,8 +524,8 @@ header p {
 
  #autocomplete {
      position:absolute;
-     top:1590px;
-     left: 100px;
+     top:2525px;
+     left: 25px;
      display: none;
      flex-direction: column;
      width:200px;
@@ -626,6 +626,11 @@ header p {
 
 @media(min-width: 768px) {
 
+    #autocomplete {
+        position:absolute;
+        top:1590px;
+        left: 100px;
+    }
 
     .time-switch {
         margin-top:15px;

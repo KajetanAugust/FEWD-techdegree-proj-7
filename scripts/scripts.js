@@ -2,6 +2,8 @@
 const closingButton = document.querySelector('.x-button');
 const alertDiv = document.querySelector('.alert');
 
+const body = document.querySelector('body')
+
 
 const bellIcon = document.querySelector('.bell-icon');
 const notifDropdown = document.querySelector('#notification-dropdown');
@@ -154,41 +156,35 @@ for(let i=0; i<3; i++) {
 
     //AUTOCOMPLETE 
 
-    autocompleteWindow.className = 'hidden';
+    autocompleteWindow.className = 'hide';
 
     formName.addEventListener('click', () => {
         autocompleteWindow.style.display = 'flex';
-        autocompleteWindow.className = 'visible';
-
+        autocompleteWindow.className = 'show';
     })
 
     for(let i=0; i <= autocompletePersons.length; i++) {
         autocompleteWindow.addEventListener('click', (e) => {
             if(e.target.className == 'hint'){
                 formName.value = e.target.textContent
+                autocompleteWindow.className = 'hide'
+                autocompleteWindow.style.display = 'none';
             }
         })
     }
 
+    
+    formName.addEventListener('keyup', ()=>{
+        const searchVal = formName.value.toLowerCase();
+        
+        for(i=0; i<autocompletePersons.length; i++){
+            const persons = autocompletePersons[i].textContent.toLowerCase();
+            if(persons.includes(searchVal) != true){
+                autocompletePersons[i].style.display = 'none';
+            }else {
+                autocompletePersons[i].style.display = '';
+            }
+        }
+    })
 
-    if(autocompleteWindow.className.includes('visible')){
-        document.addEventListener('click', (e) =>{
-                const autoClicked = e.target.className;
-                if(autoClicked.includes('visible') != true){
-                    autocompleteWindow.className = 'hidden'
-                    autocompleteWindow.style.display = 'none';
-                }  
-        })
-    }
-
-    // document.addEventListener('click', (e) =>{
-    //     const clicked = e.target.className;
-    //     if(clicked.includes('visible') != true){
-    //         autocompleteWindow.className = 'hidden';
-    //         autocompleteWindow.display = 'none';
-            
-    //         for(let i=0; i<notifChild.length; i++){
-    //             autocompleteWindow.remove("visible");
-    //         }
-    //     }
-    // })
+    
