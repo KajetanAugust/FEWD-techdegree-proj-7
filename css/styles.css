@@ -217,7 +217,6 @@ header p {
     height: auto;
     width: 32px;
     align-self: center;
-    padding:auto auto;
     margin: auto auto;
     border-radius: 5px;
 }
@@ -348,7 +347,6 @@ header p {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100px;
-    padding: auto auto;
     margin: auto 10px auto 30px;
     align-self: center;
 }
@@ -788,8 +786,6 @@ header p {
 
     .social-data {
         width: 30%;
-        padding-left: 100;
-        padding-right:auto;
     }
 
     .logo{
