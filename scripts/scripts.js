@@ -63,10 +63,10 @@ const settingsForm = document.querySelector('.settings-form');
 // TRAFFIC CHART SWITCHING //
 /////////////////////////////
         
-        hourlyTraffic.style.display = '';
-        dailyTraffic.style.display = 'none';
-        weeklyTraffic.style.display = 'none';
-        monthlyTraffic.style.display = 'none';
+    hourlyTraffic.style.visibility = 'visible';
+    dailyTraffic.style.visibility = 'hidden';
+    weeklyTraffic.style.visibility = 'hidden';
+    monthlyTraffic.style.visibility = 'hidden';
 
 
 timeSwitch.addEventListener('click', (e) => {
@@ -76,28 +76,29 @@ timeSwitch.addEventListener('click', (e) => {
     
     if(time.toLowerCase().includes('day')){
         // sessionStorage.setItem('timeSwitch', 'Day');
-        dailyTraffic.style.display = '';
-        hourlyTraffic.style.display = 'none';
-        weeklyTraffic.style.display = 'none';
-        monthlyTraffic.style.display = 'none';
+        hourlyTraffic.style.visibility = 'hidden';
+        dailyTraffic.style.visibility = 'visible';
+        weeklyTraffic.style.visibility = 'hidden';
+        monthlyTraffic.style.visibility = 'hidden';
     } else if(time.toLowerCase().includes('week')){
         // sessionStorage.setItem('timeSwitch', 'Week');
-        weeklyTraffic.style.display = '';
-        hourlyTraffic.style.display = 'none';
-        dailyTraffic.style.display = 'none';
-        monthlyTraffic.style.display = 'none';
+        hourlyTraffic.style.visibility = 'hidden';
+        dailyTraffic.style.visibility = 'hidden';
+        weeklyTraffic.style.visibility = 'visible';
+        monthlyTraffic.style.visibility = 'hidden';
     } else if(time.toLowerCase().includes('hour')){
         // sessionStorage.setItem('timeSwitch', 'Hour');
-        hourlyTraffic.style.display = '';
-        dailyTraffic.style.display = 'none';
-        weeklyTraffic.style.display = 'none';
-        monthlyTraffic.style.display = 'none';
+        hourlyTraffic.style.visibility = 'visible';
+        dailyTraffic.style.visibility = 'hidden';
+        weeklyTraffic.style.visibility = 'hidden';
+        monthlyTraffic.style.visibility = 'hidden';
+
     } else if(time.toLowerCase().includes('month')){
         // sessionStorage.setItem('timeSwitch', 'Month');
-        monthlyTraffic.style.display = '';
-        hourlyTraffic.style.display = 'none';
-        dailyTraffic.style.display = 'none';
-        weeklyTraffic.style.display = 'none';
+        hourlyTraffic.style.visibility = 'hidden';
+        dailyTraffic.style.visibility = 'hidden';
+        weeklyTraffic.style.visibility = 'hidden';
+        monthlyTraffic.style.visibility = 'visible';
     }
     console.log(time)
 })

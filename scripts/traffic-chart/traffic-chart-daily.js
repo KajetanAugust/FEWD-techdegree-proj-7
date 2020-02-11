@@ -26,9 +26,6 @@
 //   // console.log(time)
 // })
 
-
-
-
 // const labelsDay = ["M", "T", "W", "T", "F", "S", "S", "M", "T", "W", "T"];
 // const seriesDay =  [50, 100, 75, 125, 175, 125, 150, 100, 150, 200, 150 ];
 
