@@ -1,9 +1,14 @@
 
+///////////////
+// SELECTORS //
+///////////////
+
+//ALERT SELECTORS
+
 const closingButton = document.querySelector('.x-button');
 const alertDiv = document.querySelector('.alert');
 
-const body = document.querySelector('body')
-
+//NOTIFICATIONS SELECTORS
 
 const bellIcon = document.querySelector('.bell-icon');
 const notifDropdown = document.querySelector('#notification-dropdown');
@@ -13,6 +18,12 @@ const notifX = document.querySelectorAll('.x-button-notif');
 const bellBadge = document.querySelector('.badge');
 const notXLength = notifX.length;
 let notifCount = 0;
+
+//TRAFFIC CHART SELETORS
+
+const timeSwitch = document.querySelector('.time-switch')
+const times = document.querySelectorAll('.time-switch label')
+const trafficContainer = document.querySelector('.traffic-container script');
 
 // MESSAGES FORM SELECTORS
 
@@ -27,6 +38,7 @@ const formOverlayButton = document.querySelector('.overlay button');
 
 const autocompleteWindow = document.querySelector('#autocomplete');
 const autocompletePersons = document.querySelectorAll('#autocomplete p');
+const time = 'hour';
 
 //SETTING LOCAL STORAGE VALUE
 
@@ -40,9 +52,50 @@ const cancelBtn = document.querySelector('.cancel-btn');
 const settingsForm = document.querySelector('.settings-form');
 
 
+
+/////////////////////////////
+// TRAFFIC CHART SWITCHING //
+/////////////////////////////
+
+timeSwitch.addEventListener('click', (e) => {
+    const time = e.target.textContent;
+    
+    if(time.toLowerCase().includes('day')){
+    sessionStorage.setItem('timeSwitch', 'Day');
+    trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-daily.js');
+    } 
+    
+    if(time.toLowerCase().includes('week')){
+        sessionStorage.setItem('timeSwitch', 'Week');
+        trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-weekly.js');
+    } 
+    
+    if(time.toLowerCase().includes('hour')){
+        sessionStorage.setItem('timeSwitch', 'Hour');
+        trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-hourly.js');
+    } 
+    
+    if(time.toLowerCase().includes('month')){
+        sessionStorage.setItem('timeSwitch', 'Month');
+        trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-monthly.js');
+    }
+    console.log(time)
+})
+
+///////////////////
+// ALERT CLOSING //
+///////////////////
+
 closingButton.addEventListener('click', () =>{
     alertDiv.style.display = 'none';
 })
+
+
+/////////////////////////////////
+// NOTIFICATIONS FUNCTIONALITY //
+/////////////////////////////////
+
+//opening dropdown
 
 bellIcon.addEventListener('click', () =>{
     notifDropdown.style.display = 'flex';
@@ -54,6 +107,7 @@ bellIcon.addEventListener('click', () =>{
     }
 })
 
+//closing notifications
 
 for(let i=0; i<3; i++) {
     notifX[i].addEventListener('click', (e) =>{
@@ -64,6 +118,8 @@ for(let i=0; i<3; i++) {
         }
     })
 }
+
+//closing dropdown
 
     document.addEventListener('click', (e) =>{
         const clicked = e.target.className;
@@ -78,8 +134,9 @@ for(let i=0; i<3; i++) {
             }
         }
     })
-
-    //EVENT LISTENER FOR FORM VALIDATION
+/////////////////////////////////////////
+// EVENT LISTENER FOR FORM VALIDATION  //
+/////////////////////////////////////////
 
     formButton.addEventListener('click', (e) => {
         if(formName.value.length === 0 || formText.value.length === 0){
@@ -99,7 +156,11 @@ for(let i=0; i<3; i++) {
         }
     })
 
-    //CONFIRMATION DISPLAY
+//////////////////////////
+// CONFIRMATION WINDOW  //
+//////////////////////////
+
+//confirmation display
 
     let formValidation = sessionStorage.getItem('message')
     if(formValidation === 'sent') {
@@ -107,7 +168,7 @@ for(let i=0; i<3; i++) {
         formDiv.style.display = 'none';
     }
 
-    //CONFIRMATION CLOSING
+//confirmation closing
 
     formOverlayButton.addEventListener('click', () => {
         formOverlay.style.display = 'none';
@@ -115,7 +176,10 @@ for(let i=0; i<3; i++) {
         sessionStorage.setItem('message','notSent');
     })
 
-    //SETTINGS SAVING
+
+/////////////////////
+// SETTINGS SAVING //
+/////////////////////
 
     settingsNotifSwitch.addEventListener('click', () =>{
         if(settingsNotifSwitch.classList.length == 1){
@@ -153,9 +217,9 @@ for(let i=0; i<3; i++) {
 
     })
 
-
-    //AUTOCOMPLETE 
-
+//////////////////
+// AUTOCOMPLETE //
+//////////////////
     autocompleteWindow.className = 'hide';
 
     formName.addEventListener('click', () => {
@@ -186,5 +250,7 @@ for(let i=0; i<3; i++) {
             }
         }
     })
+
+
 
     
