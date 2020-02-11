@@ -24,6 +24,11 @@ let notifCount = 0;
 const timeSwitch = document.querySelector('.time-switch')
 const times = document.querySelectorAll('.time-switch label')
 const trafficContainer = document.querySelector('.traffic-container script');
+const hourlyTraffic = document.querySelector('.hourly-traffic')
+const dailyTraffic = document.querySelector('.daily-traffic')
+const weeklyTraffic = document.querySelector('.weekly-traffic')
+const monthlyTraffic = document.querySelector('.monthly-traffic')
+
 
 // MESSAGES FORM SELECTORS
 
@@ -38,7 +43,8 @@ const formOverlayButton = document.querySelector('.overlay button');
 
 const autocompleteWindow = document.querySelector('#autocomplete');
 const autocompletePersons = document.querySelectorAll('#autocomplete p');
-const time = 'hour';
+
+
 
 //SETTING LOCAL STORAGE VALUE
 
@@ -56,28 +62,42 @@ const settingsForm = document.querySelector('.settings-form');
 /////////////////////////////
 // TRAFFIC CHART SWITCHING //
 /////////////////////////////
+        
+        hourlyTraffic.style.display = '';
+        dailyTraffic.style.display = 'none';
+        weeklyTraffic.style.display = 'none';
+        monthlyTraffic.style.display = 'none';
+
 
 timeSwitch.addEventListener('click', (e) => {
-    const time = e.target.textContent;
+
+    let time = e.target.textContent;
+    // sessionStorage.setItem('timeSwitch', e.target.textContent);
     
     if(time.toLowerCase().includes('day')){
-    sessionStorage.setItem('timeSwitch', 'Day');
-    trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-daily.js');
-    } 
-    
-    if(time.toLowerCase().includes('week')){
-        sessionStorage.setItem('timeSwitch', 'Week');
-        trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-weekly.js');
-    } 
-    
-    if(time.toLowerCase().includes('hour')){
-        sessionStorage.setItem('timeSwitch', 'Hour');
-        trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-hourly.js');
-    } 
-    
-    if(time.toLowerCase().includes('month')){
-        sessionStorage.setItem('timeSwitch', 'Month');
-        trafficContainer.setAttribute('src','scripts/traffic chart/traffic-chart-monthly.js');
+        // sessionStorage.setItem('timeSwitch', 'Day');
+        dailyTraffic.style.display = '';
+        hourlyTraffic.style.display = 'none';
+        weeklyTraffic.style.display = 'none';
+        monthlyTraffic.style.display = 'none';
+    } else if(time.toLowerCase().includes('week')){
+        // sessionStorage.setItem('timeSwitch', 'Week');
+        weeklyTraffic.style.display = '';
+        hourlyTraffic.style.display = 'none';
+        dailyTraffic.style.display = 'none';
+        monthlyTraffic.style.display = 'none';
+    } else if(time.toLowerCase().includes('hour')){
+        // sessionStorage.setItem('timeSwitch', 'Hour');
+        hourlyTraffic.style.display = '';
+        dailyTraffic.style.display = 'none';
+        weeklyTraffic.style.display = 'none';
+        monthlyTraffic.style.display = 'none';
+    } else if(time.toLowerCase().includes('month')){
+        // sessionStorage.setItem('timeSwitch', 'Month');
+        monthlyTraffic.style.display = '';
+        hourlyTraffic.style.display = 'none';
+        dailyTraffic.style.display = 'none';
+        weeklyTraffic.style.display = 'none';
     }
     console.log(time)
 })

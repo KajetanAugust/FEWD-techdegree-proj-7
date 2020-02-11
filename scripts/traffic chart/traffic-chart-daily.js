@@ -44,7 +44,7 @@
 
 
 
-  new Chartist.Line('.traffic-container', {
+  new Chartist.Line('.daily-traffic', {
     labels: ["M", "T", "W", "T", "F", "S", "S", "M", "T", "W", "T"],
     series: [
       [50, 100, 75, 125, 175, 125, 150, 100, 150, 200, 150, 250 ]]

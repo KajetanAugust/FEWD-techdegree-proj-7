@@ -230,18 +230,52 @@ header p {
 /* ////////////////////// */
 /* /////  TRAFFIC  ////// */
 /* ////////////////////// */
+.title-switch-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.traffic h4 {
+    width:100px;
+    
+    margin-right: 0;
+    padding-right: 0;
+}
 
 .time-switch{
     padding-bottom: 5px;
     width: 85%;
-    margin: auto auto;
+    margin:auto auto;
+    padding-top:0px;
     z-index:2;
 }
 
-.traffic-container {
+
+.hourly-traffic {
     width:100%;
     height:70%;
-    margin:auto auto;
+    margin:0 auto 0 auto;
+
+}
+
+.daily-traffic {
+    width:100%;
+    height:70%;
+    margin:0 auto 0 auto;
+}
+
+.weekly-traffic {
+    width:100%;
+    height:70%;
+    
+    margin:0 auto 0 auto;
+}
+
+.monthly-traffic {
+    width:100%;
+    height:70%;
+    margin:0 auto 0 auto;
 }
 
 .ct-series-a .ct-line,
@@ -547,6 +581,11 @@ header p {
 /* ////////////////////// */
 /* /////  SETTINGS ////// */
 /* ////////////////////// */
+
+.title-switch-wrap {
+    display: flex;
+    flex-direction: row;
+}
 
 .switches {
     display:flex;
