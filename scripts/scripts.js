@@ -72,29 +72,31 @@ const settingsForm = document.querySelector('.settings-form');
 timeSwitch.addEventListener('click', (e) => {
 
     let time = e.target.textContent;
-    // sessionStorage.setItem('timeSwitch', e.target.textContent);
+   
     
     if(time.toLowerCase().includes('day')){
-        // sessionStorage.setItem('timeSwitch', 'Day');
+        
         hourlyTraffic.style.visibility = 'hidden';
         dailyTraffic.style.visibility = 'visible';
         weeklyTraffic.style.visibility = 'hidden';
         monthlyTraffic.style.visibility = 'hidden';
+
     } else if(time.toLowerCase().includes('week')){
-        // sessionStorage.setItem('timeSwitch', 'Week');
+        
         hourlyTraffic.style.visibility = 'hidden';
         dailyTraffic.style.visibility = 'hidden';
         weeklyTraffic.style.visibility = 'visible';
         monthlyTraffic.style.visibility = 'hidden';
+
     } else if(time.toLowerCase().includes('hour')){
-        // sessionStorage.setItem('timeSwitch', 'Hour');
+        
         hourlyTraffic.style.visibility = 'visible';
         dailyTraffic.style.visibility = 'hidden';
         weeklyTraffic.style.visibility = 'hidden';
         monthlyTraffic.style.visibility = 'hidden';
 
     } else if(time.toLowerCase().includes('month')){
-        // sessionStorage.setItem('timeSwitch', 'Month');
+        
         hourlyTraffic.style.visibility = 'hidden';
         dailyTraffic.style.visibility = 'hidden';
         weeklyTraffic.style.visibility = 'hidden';
