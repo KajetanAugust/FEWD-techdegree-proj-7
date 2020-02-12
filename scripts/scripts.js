@@ -29,7 +29,6 @@ const dailyTraffic = document.querySelector('.daily-traffic')
 const weeklyTraffic = document.querySelector('.weekly-traffic')
 const monthlyTraffic = document.querySelector('.monthly-traffic')
 
-
 // MESSAGES FORM SELECTORS
 
 const formName = document.querySelector('.contact-form input');
@@ -44,8 +43,6 @@ const formOverlayButton = document.querySelector('.overlay button');
 const autocompleteWindow = document.querySelector('#autocomplete');
 const autocompletePersons = document.querySelectorAll('#autocomplete p');
 
-
-
 //SETTING LOCAL STORAGE VALUE
 
 const settingsNotifSwitch = document.querySelector('.notif-switch');
@@ -53,6 +50,7 @@ let settingsNotifSwitchValue ="off";
 const settingsPublicSwitch = document.querySelector('.public-switch');
 let settingsPublicSwitchValue ="off";
 const settingsTimeZone = document.querySelector('.settings-buttons select');
+const settingsTimeZoneOptions = document.querySelectorAll('select option');
 const saveBtn = document.querySelector('.save-btn');
 const cancelBtn = document.querySelector('.cancel-btn');
 const settingsForm = document.querySelector('.settings-form');
@@ -102,7 +100,7 @@ timeSwitch.addEventListener('click', (e) => {
         weeklyTraffic.style.visibility = 'hidden';
         monthlyTraffic.style.visibility = 'visible';
     }
-    console.log(time)
+    // console.log(time)
 })
 
 ///////////////////
@@ -200,29 +198,77 @@ for(let i=0; i<3; i++) {
     })
 
 
+
+
+//////////////////
+// AUTOCOMPLETE //
+//////////////////
+    
+autocompleteWindow.className = 'hide';
+
+formName.addEventListener('click', () => {
+    autocompleteWindow.style.display = 'flex';
+    autocompleteWindow.className = 'show';
+})
+
+for(let i=0; i <= autocompletePersons.length; i++) {
+    autocompleteWindow.addEventListener('click', (e) => {
+        if(e.target.className == 'hint'){
+            formName.value = e.target.textContent
+            autocompleteWindow.className = 'hide'
+            autocompleteWindow.style.display = 'none';
+        }
+    })
+}
+
+
+formName.addEventListener('keyup', ()=>{
+    const searchVal = formName.value.toLowerCase();
+    
+    for(i=0; i<autocompletePersons.length; i++){
+        const persons = autocompletePersons[i].textContent.toLowerCase();
+        if(persons.includes(searchVal) != true){
+            autocompletePersons[i].style.display = 'none';
+        }else {
+            autocompletePersons[i].style.display = '';
+        }
+    }
+})
+
+
 /////////////////////
 // SETTINGS SAVING //
 /////////////////////
 
+//NOTIFICATION SWITCH SETTINGS
+
     settingsNotifSwitch.addEventListener('click', () =>{
         if(settingsNotifSwitch.classList.length == 1){
             settingsNotifSwitch.classList.add('on');
-            settingsNotifSwitchValue = "on"
+            settingsNotifSwitchValue = "on";
+            settingsNotifSwitch.setAttribute('checked','');
         } else if(settingsNotifSwitch.classList.length > 1){
             settingsNotifSwitch.classList.remove('on');
-            settingsNotifSwitchValue = "off"
+            settingsNotifSwitchValue = "off";
+            settingsNotifSwitch.removeAttribute('checked','');
         }
     })
+
+//SETTING PROFILE TO PUBLIC SWITCH SETTINGS
 
     settingsPublicSwitch.addEventListener('click', () =>{
         if(settingsPublicSwitch.classList.length == 1){
             settingsPublicSwitch.classList.add('on');
             settingsPublicSwitchValue = "on"
+            settingsPublicSwitch.setAttribute('checked','');
         } else if(settingsPublicSwitch.classList.length > 1){
             settingsPublicSwitch.classList.remove('on');
             settingsPublicSwitchValue = "off"
+            settingsPublicSwitch.removeAttribute('checked','');
         }
     })
+
+//SAVING AND DELETING SESSION STORAGE
 
     saveBtn.addEventListener('click', (e) => {
         if(e.target === saveBtn )
@@ -236,43 +282,40 @@ for(let i=0; i<3; i++) {
         sessionStorage.setItem('Send notifications', '');
         sessionStorage.setItem('Set profile to public', '');
         sessionStorage.setItem('Time zone', '');
-        settingsForm.reset()
-
-    })
-
-//////////////////
-// AUTOCOMPLETE //
-//////////////////
-    autocompleteWindow.className = 'hide';
-
-    formName.addEventListener('click', () => {
-        autocompleteWindow.style.display = 'flex';
-        autocompleteWindow.className = 'show';
-    })
-
-    for(let i=0; i <= autocompletePersons.length; i++) {
-        autocompleteWindow.addEventListener('click', (e) => {
-            if(e.target.className == 'hint'){
-                formName.value = e.target.textContent
-                autocompleteWindow.className = 'hide'
-                autocompleteWindow.style.display = 'none';
-            }
-        })
-    }
-
-    
-    formName.addEventListener('keyup', ()=>{
-        const searchVal = formName.value.toLowerCase();
         
-        for(i=0; i<autocompletePersons.length; i++){
-            const persons = autocompletePersons[i].textContent.toLowerCase();
-            if(persons.includes(searchVal) != true){
-                autocompletePersons[i].style.display = 'none';
-            }else {
-                autocompletePersons[i].style.display = '';
-            }
-        }
+            settingsTimeZoneOptions[0].setAttribute('selected', '');
+        
+        settingsForm.reset()
     })
+
+//SETTINGS MEMORY
+
+    //notifications switch
+    if(sessionStorage.getItem('Send notifications') === 'on'){
+        settingsNotifSwitch.setAttribute('checked','');
+        settingsNotifSwitch.classList.add('on');
+        settingsNotifSwitchValue = "on";
+    } 
+    
+    //public switch
+    if(sessionStorage.getItem('Set profile to public') === 'on'){
+        settingsPublicSwitch.setAttribute('checked','');
+        settingsPublicSwitch.classList.add('on');
+        settingsPublicSwitchValue = "on";
+        
+    } 
+
+    //time zone select
+
+    for(let i=0; i<settingsTimeZoneOptions.length; i++ ) {
+        const currentTimeValue = sessionStorage.getItem('Time zone');
+        let processedTimeZone = settingsTimeZoneOptions[i].getAttribute('value');
+        if(processedTimeZone === currentTimeValue){
+            settingsTimeZoneOptions[i].setAttribute('selected', '');
+        }
+}
+  
+
 
 
 
