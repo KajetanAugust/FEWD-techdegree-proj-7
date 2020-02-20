@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a606dd9c-7385-413d-bc06-38b85c3889ad" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Y5hyjo5qtiW87TCdeShzi9dhAl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a606dd9c-7385-413d-bc06-38b85c3889ad" name="Default Changelist" comment="" />
+      <created>1582238618718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582238618718</updated>
+      <workItem from="1582238622326" duration="31000" />
+      <workItem from="1582238684119" duration="47000" />
+      <workItem from="1582238821652" duration="1306000" />
+      <workItem from="1582240215680" duration="46000" />
+      <workItem from="1582240279899" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="581" y="358" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1582239883805">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state x="581" y="358" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.983@0.23.1680.983" timestamp="1582239883805" />
+    <state x="535" y="284" key="SettingsEditor" timestamp="1582240237424">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state x="535" y="284" key="SettingsEditor/0.23.1680.983@0.23.1680.983" timestamp="1582240237424" />
+    <state x="517" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1582240280576">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state x="517" y="347" key="com.intellij.ide.util.TipDialog/0.23.1680.983@0.23.1680.983" timestamp="1582240280576" />
+  </component>
+</project>
